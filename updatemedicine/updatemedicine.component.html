@@ -1,0 +1,134 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">&nbsp; JivanDan Hospital</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">s
+      <ul class="navbar-nav mr-auto">
+       
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/docdash']">Back </a>
+        </li>
+    
+        </ul>
+  
+         
+   
+        <!-- <input class="form-control custom-width mr-sm   ml-auto" type="search" placeholder="Search" aria-label="Search" >
+     &nbsp;   <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search</button> -->
+  
+  </div>
+  </nav>
+    
+    
+    <br><h3 class="text-center">Available Medicines</h3>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            margin: 0;
+        }
+        .outer {
+            width: 450px;
+            border: 2px solid #00796b;
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            color: #004d40;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            color: #00796b;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: calc(100% - 20px);
+            padding: 12px;
+            border: 1px solid #b2dfdb;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            border-color: #004d40;
+            outline: none;
+        }
+        #bt {
+            margin-top: 30px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            background-color: #004d40;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #bt:hover {
+            background-color: #00796b;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #004d40;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <h1>Update Medicine</h1>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="name">DrugName</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="medicine.drugname" name="name">
+            </div>
+            <div class="form-group">
+                <label for="age">Avilable stock quantity</label>
+                <input type="text" class="form-control" id="age" [(ngModel)]="medicine.stock" name="age">
+            </div>
+         
+
+            <button type="submit" class="btn btn-success" id="bt">Submit</button>
+            <!-- <input type="submit" value="Submit" onmouseenter="fa()" onclick="alert('Form submitted')" id="bt" /> -->
+        </form>
+    </div>
+    
+    
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,111 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">&nbsp; JivanDan Hospital</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/docdash']">Back</a>
+        </li>
+
+    
+        </ul>
+  
+         
+   
+        <!-- <input class="form-control custom-width mr-sm   ml-auto" type="search" placeholder="Search" aria-label="Search" >
+     &nbsp;   <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search</button> -->
+  
+  </div>
+  </nav>
+    
+    
+    <br><h3 class="text-center">Add Appointments</h3>
+    <div class="container">
+  <router-outlet></router-outlet>
+  </div>&nbsp;
+
+ 
+ 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .form-heading {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #343a40;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefault01">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter full name" required [(ngModel)]="patient.name" name="name">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefault02">Age</label>
+                    <input type="text" class="form-control" id="name" placeholder="Age" required [(ngModel)]="patient.age" name="age">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="validationDefault03">Blood</label>
+                    <input type="text" class="form-control" id="name" placeholder="Blood" required [(ngModel)]="patient.blood" name="symptoms">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="validationDefault04">pescription</label>
+                    <input type="text" class="form-control" id="name" placeholder="pescription" required [(ngModel)]="patient.pescription"name="number">
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <label for="validationDefault04">Dose</label>
+                    <input type="text" class="form-control" id="name" placeholder="Dose" required [(ngModel)]="patient.dose"name="number">
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <label for="validationDefault04">Fees</label>
+                    <input type="number" class="form-control" id="name" placeholder="Fees" required [(ngModel)]="patient.fees"name="number">
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <label for="validationDefault04">Urgency</label>
+                    <input type="text" class="form-control" id="name" placeholder="urgency" required [(ngModel)]="patient.urgency"name="number">
+                </div>
+
+            </div>
+            <button class="btn btn-primary" type="submit">Submit </button>
+        </form>
+    </div>
+</body>
+</html>

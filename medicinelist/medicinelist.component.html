@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">&nbsp; JivanDan Hospital</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">s
+      <ul class="navbar-nav mr-auto">
+       
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/docdash']">Back </a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/addmedicine']">Add Medicine </a>
+        </li>
+    
+        </ul>
+  
+         
+   
+        <!-- <input class="form-control custom-width mr-sm   ml-auto" type="search" placeholder="Search" aria-label="Search" >
+     &nbsp;   <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search</button> -->
+  
+  </div>
+  </nav>
+    
+    
+    <br><h3 class="text-center">Available Medicines</h3>
+    <div class="container">
+  <router-outlet></router-outlet>
+  </div>
+
+ 
+
+  <footer class="footer">
+    <div class="container">
+      <span>All rigts are Reserved 2024</span>
+    </div>
+  </footer>
+
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>DrugName</th>
+        <th>Stock</th>
+        <th>Action</th>
+       
+        </tr>
+
+</thead>
+
+<tbody>
+    <tr *ngFor="let medicines of medicine">
+        <td>{{ medicines.id }}</td>
+        <td>{{ medicines.drugname }}</td>
+        <td>{{ medicines.stock }}</td>
+       <td>
+        <button class="btn btn-success"(click)="updatemedicine(medicines.id)">Update</button>&nbsp;
+        <button class="btn btn-danger"(click)="deletemedicine(medicines.id)">Delete</button>
+       </td>
+    </tr>
+</tbody>
+    </table>
+

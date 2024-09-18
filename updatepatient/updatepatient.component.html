@@ -1,0 +1,113 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">&nbsp; JivanDan Hospital</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/docdash']">Back</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <div class="outer">
+        <h3 style="text-align: center;">Update patient</h3>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="patient.name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="text" class="form-control" id="age" [(ngModel)]="patient.age" name="age">
+            </div>
+            <div class="form-group">
+                <label for="prescription">Prescription</label>
+                <input type="text" class="form-control" id="prescription" [(ngModel)]="patient.pescription" name="prescription">
+            </div>
+            <div class="form-group">
+                <label for="blood">Blood group</label>
+                <input type="text" class="form-control" id="blood" [(ngModel)]="patient.blood" name="blood">
+            </div>
+            <div class="form-group">
+                <label for="dose">Dose</label>
+                <input type="text" class="form-control" id="dose" [(ngModel)]="patient.dose" name="dose">
+            </div>
+            <div class="form-group">
+                <label for="urgency">Urgency</label>
+                <input type="text" class="form-control" id="urgency" [(ngModel)]="patient.urgency" name="urgency">
+            </div>
+            <button type="submit" class="btn btn-success" id="bt">Submit</button>
+        </form>
+    </div>
+</body>
+
+<footer class="footer text-center mt-auto py-3 bg-dark text-light">
+    <div class="container">
+        <span>All rights reserved &copy; 2024</span>
+    </div>
+</footer>
+
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #e0f7fa;
+    }
+
+    .outer {
+        width: 400px;
+        padding: 30px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        animation: border-animation 5s infinite;
+    }
+
+    @keyframes border-animation {
+        0% {
+            border: 2px solid #4CAF50;
+        }
+        50% {
+            border: 2px solid #00BCD4;
+        }
+        100% {
+            border: 2px solid #4CAF50;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .btn-success {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #28a745;
+        border: none;
+    }
+</style>

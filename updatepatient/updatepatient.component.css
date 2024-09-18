@@ -1,0 +1,23 @@
+.navbar {
+    margin-bottom: 20px; /* Add space below the navbar */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Center the card horizontally */
+    align-items: center;
+    min-height: 80vh; /* Make sure the form is vertically centered */
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 400px;
+    width: 100%;
+}
+
+body {
+    background-color: #e0f7fa; /* Set a light background color */
+}

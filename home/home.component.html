@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIVANDAN Hospitals</title>
+    <style>
+        /* Resetting the margin, padding, and box-sizing for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Setting the body's font and ensuring it occupies the full height of the viewport */
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 230vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Styling the header */
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Header title styling */
+        .header h1 {
+            font-size: 24px;
+        }
+
+        /* Styling the login buttons in the header */
+        .login-buttons button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        /* Hover effect for the login buttons */
+        .login-buttons button:hover {
+            background-color: darkred;
+        }
+
+        /* Styling the welcome section */
+        .welcome-section {
+            position: relative;
+            flex-grow: 1;
+            background: url('../assets/Images/backgroundHMS.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+        /* Styling the welcome message */
+        .welcome-message {
+            text-align: center;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Styling the welcome message title */
+        .welcome-message h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling the feature buttons */
+        .features {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        /* Individual feature button styling */
+        .feature {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Hover effect for feature buttons */
+        .feature:hover {
+            background-color:green;
+        }
+
+        /* Styling the second page section */
+        .second-page {
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        .second-page h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .info-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+        }
+        .card:hover{
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.10s;
+
+        }
+
+        .card img {
+            display: block;
+            margin: 0 auto 15px;
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>JIVANDAN HOSPITAL</h1>
+        <div class="login-buttons">
+            <button  [routerLink]="['/logindoct']">Login as Doctor</button>
+            <button [routerLink]="['/loginadmin']">Login as Admin</button>
+        </div>
+    </header>
+
+    <section class="welcome-section">
+        <div class="welcome-message">
+            <h2>Welcome to JIVANDAN</h2>
+            <div class="features">
+                <div class="text-primary" class="feature">10000+ Healing Hands</div>
+                <div class="text-secondary"class="feature">Advanced Treatment</div>
+                <div class="text-info"class="feature">Best Clinical Outcomes</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Page Section -->
+    <section class="second-page">
+        <h2>Our Commitment to Excellence</h2>
+        <div class="info-cards">
+            <div class="card">
+                <img src="../assets/Images/healthcare1.jpg" alt="Image">
+                <h3>Why Choose Jivandan Healthcare?</h3>
+                <p>Largest network of the world's finest and brightest medical experts who provide compassionate care using outstanding expertise and advanced technology.</p>
+            </div>
+            <div class="card">
+                <img src="../assets/Images/stroke.jpeg" alt="Image">
+                <h3>Stop The Stroke!</h3>
+                <p>When someone has a stroke, we lose crucial brain cells, the key to mobility, communication, and memory.</p>
+            </div>
+            <div class="card">
+                <img src="../assets/Images/heart.jpg" alt="Image">
+                <h3>Jivandan Heart Institute Expertise</h3>
+                <p>The Jivandan Heart Institutes are regarded as one of the best heart care institutions in the region.</p>
+            </div>
+            <div class="card">
+                <img src="../assets/Images/sleep.jpg" alt="Image">
+                <h3>Jivandan Never Sleeps</h3>
+                <p>Get the most advanced emergency care anywhere in minutes, just for free.</p>
+            </div>
+            <div class="card">
+                <img src="../assets/Images/care.jpg" alt="Image">
+                <h3>Patient-Centered Care</h3>
+                <p>Personalized Treatment Plans Jeevandan Healthcare focuses on creating individualized treatment plans tailored to each patient's unique needs and medical history.</p>
+            </div>
+
+            <div class="card">
+                <img src="../assets/Images/technology.jpg" alt="Image">
+                <h3>Cutting-Edge Technology</h3>
+                <p>Diagnostic Excellence The hospital uses the latest diagnostic tools, including advanced imaging and laboratory facilities, to ensure accurate and timely diagnoses.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

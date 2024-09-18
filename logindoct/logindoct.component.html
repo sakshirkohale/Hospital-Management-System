@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">&nbsp; JivanDan Hospital</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/home']">Home </a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<body style=" background: url('../assets/Images/drlogin.jpg') no-repeat center center/cover">
+>
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4 shadow-lg" style="width: 25rem; animation: fadeIn 1s ease-out;">
+        <h3 class="text-center mb-4">Login As Doctor</h3>
+        <form (ngSubmit)="checklogin()" #loginForm="ngForm">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control animated-input" id="username" placeholder="Enter username" [(ngModel)]="username" name="username" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control animated-input" id="password" placeholder="Enter password" [(ngModel)]="password" name="password" required>
+            </div>
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-success" [disabled]="!loginForm.valid">Login</button>
+                <button class="btn btn-warning" type="button" routerLink="/home">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer class="footer text-center mt-auto py-3 bg-dark text-light">
+    <div class="container">
+      <span>All rights are Reserved 2024</span>
+    </div>
+</footer>
+</body>

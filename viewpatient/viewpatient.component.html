@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">&nbsp; JivanDan Hospital</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/docdash']">Back</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+
+<div class="card-container">
+    <div class="card">
+        <div>
+            <label>ID: <strong>{{patient.id}}</strong></label>
+        </div>
+        <div>
+            <label>Name: <strong>{{patient.name}}</strong></label>
+        </div>
+        <div>
+            <label>Age: <strong>{{patient.age}}</strong></label>
+        </div>
+        <div>
+            <label>Blood Group: <strong>{{patient.blood}}</strong></label>
+        </div>
+        <div>
+            <label>Prescription: <strong>{{patient.pescription}}</strong></label>
+        </div>
+        <div>
+            <label>Dose: <strong>{{patient.dose}}</strong></label>
+        </div>
+        <div>
+            <label>Fees: <strong>{{patient.fees}}</strong></label>
+        </div>
+        <div>
+            <label>Urgency: <strong>{{patient.urgency}}</strong></label>
+        </div>
+    </div>
+</div>
+

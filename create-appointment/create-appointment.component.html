@@ -1,0 +1,75 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">&nbsp; JivanDan Hospital</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/appointment']">Back</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .form-heading {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #343a40;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-heading">Add Appointment</div>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefault01">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter full name" required [(ngModel)]="appointment.name" name="name">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefault02">Age</label>
+                    <input type="text" class="form-control" id="name" placeholder="Age" required [(ngModel)]="appointment.age" name="age">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="validationDefault03">Symptoms</label>
+                    <input type="text" class="form-control" id="name" placeholder="Symptoms" required [(ngModel)]="appointment.symptoms" name="symptoms">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="validationDefault04">Mobile Number</label>
+                    <input type="number" class="form-control" id="name" placeholder="Mobile no" required [(ngModel)]="appointment.number"name="number">
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit </button>
+        </form>
+    </div>
+</body>
+</html>
